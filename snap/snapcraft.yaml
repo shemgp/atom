@@ -21,7 +21,8 @@ parts:
     source-type: deb
     # Correct path to icon.
     prepare: |
-      sed -i 's|Icon=atom|Icon=/usr/share/pixmaps/atom\.png|g' usr/share/applications/atom.desktop
+      sed -i 's|Icon=atom|/snap/atom/current/usr/share/pixmaps/atom\.png|g' usr/share/applications/atom.desktop
+      sed -i 's|Exec=.*|Exec=/snap/bin/atom %F|g' usr/share/applications/atom.desktop
     after:
       - desktop-gtk2
     build-packages:
