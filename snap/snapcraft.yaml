@@ -1,4 +1,4 @@
-name: atom
+name: atom-shemgp
 version: latest
 version-script: cat $SNAPCRAFT_STAGE/version
 summary: A hackable text editor for the 21st Century.
